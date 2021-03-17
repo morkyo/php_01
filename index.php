@@ -46,11 +46,11 @@ while ($val = fgets($fp)) {
         <li>
           <div class="contents_name">
             <span class="contents_num"><?= $i++; ?></span>
-            <?= $data["name"]; ?>
+            <?= htmlspecialchars($data["name"],ENT_QUOTES); ?>
             <span class="contents_time"><?= $data["time"]; ?></span>
           </div>
           <div class="contents_msg">
-            <?= $data["msg"]; ?>
+          <?= htmlspecialchars($data["msg"],ENT_QUOTES); ?>
           </div>
         </li>
     <?php endforeach; ?>
@@ -71,9 +71,6 @@ while ($val = fgets($fp)) {
       </div>
     </form>
   </div>
-  
 </main>
-
-
 </body>
 </html>
