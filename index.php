@@ -10,16 +10,22 @@
 </head>
 <body>
 <?php
+
+
 //入力内容を書き出し
 $name = '';
 $time = '';
 $msg = '';
 $i = 1;
 date_default_timezone_set('Asia/Tokyo');
+  
 if (isset($_POST['send']) === true) {
   $name = $_POST['name'];
   $msg = $_POST['msg'];
   $time = $_POST['time'];
+  if (empty($_POST['name'])){
+    $name = "名無しさん＠お腹いっぱい。";
+  }
   $fp = fopen('log.txt','a');
   fwrite($fp,$name."\t".$time."\t".$msg."\n");
   fclose($fp);
