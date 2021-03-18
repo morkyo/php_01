@@ -65,6 +65,17 @@ main {
   color: #333;
 }
 .contents_msg {
-  padding: 0 30px;
+  padding: 0 20px;
   line-height: 1.5;
+}
+.error {
+  width: 400px;
+  margin: 60px auto 0;
+  padding: 20px 0;
+  border: 1px solid red;
+  background: #fff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
+  color: red;
 }
